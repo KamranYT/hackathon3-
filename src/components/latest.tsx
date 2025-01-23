@@ -66,6 +66,7 @@
 
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 function LatestProduct() {
   // Define the products object with explicit type
@@ -74,36 +75,36 @@ function LatestProduct() {
     { id: number; name: string; price: string; originalPrice: string; img: string }[]
   > = {
     "New Arrival": [
-      { id: 1, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest1.png" },
-      { id: 2, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest2.png" },
-      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest3.png" },
-      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest4.png" },
-      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest5.png" },
-      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest6.png" },
+      { id: 1, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest1.png" },
+      { id: 2, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest2.png" },
+      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest3.png" },
+      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest4.png" },
+      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest5.png" },
+      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest6.png" },
     ],
     "Best Seller": [
-      { id: 1, name: "Elegant Craft", price: "$50.00", originalPrice: "$75.00", img: "latest6.png" },
-      { id: 2, name: "Modern Handy Craft", price: "$45.00", originalPrice: "$65.00", img: "latest5.png" },
-      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest4.png" },
-      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest3.png" },
-      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest2.png" },
-      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest1.png" },
+      { id: 1, name: "Elegant Craft", price: "$50.00", originalPrice: "$75.00", img: "/latest6.png" },
+      { id: 2, name: "Modern Handy Craft", price: "$45.00", originalPrice: "$65.00", img: "/latest5.png" },
+      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest4.png" },
+      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest3.png" },
+      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest2.png" },
+      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest1.png" },
     ],
     "Featured": [
-      { id: 1, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest3.png" },
-      { id: 2, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest2.png" },
-      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest1.png" },
-      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest5.png" },
-      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest6.png" },
-      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest4.png" },
+      { id: 1, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest3.png" },
+      { id: 2, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest2.png" },
+      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest1.png" },
+      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest5.png" },
+      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest6.png" },
+      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest4.png" },
     ],
     "Special Offer": [
-      { id: 1, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest1.png" },
-      { id: 2, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest2.png" },
-      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest1.png" },
-      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest2.png" },
-      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest1.png" },
-      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "latest2.png" },
+      { id: 1, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest1.png" },
+      { id: 2, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest2.png" },
+      { id: 3, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest1.png" },
+      { id: 4, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest2.png" },
+      { id: 5, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest1.png" },
+      { id: 6, name: "Comfort Handy Craft", price: "$42.00", originalPrice: "$65.00", img: "/latest2.png" },
     ],
   };
 
@@ -134,9 +135,11 @@ function LatestProduct() {
         {products[category].map((product) => (
           <div key={product.id} className="border rounded-lg shadow-md p-4 bg-[#f7f7f7]">
             <div className="w-full h-60 mx-auto">
-              <img
+              <Image
                 src={product.img}
                 alt={product.name}
+                width={250}
+                height={250}
                 className="w-[250px] h-full object-cover rounded-t-lg mb-4"
               />
             </div>

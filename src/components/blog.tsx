@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const LatestBlog = () => {
   const blogs = [
@@ -40,9 +41,11 @@ const LatestBlog = () => {
               <div 
               className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg">
                 
-                <img
+                <Image
                   src={blog.image}
                   alt={blog.title}
+                  width={300}
+                  height={200}
                   className="object-contain w-full h-full"
                 />
               </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const ContactPage: React.FC = () => {
   return (
@@ -99,7 +100,7 @@ const ContactPage: React.FC = () => {
 
             {/* Decorative Image */}
             <div className="absolute bottom-4 right-4 w-32 sm:w-40 lg:w-56 opacity-80">
-              <img
+              <Image
                 src="/contact.png"
                 alt="Contact Illustration"
                 className="w-full"
